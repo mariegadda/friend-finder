@@ -1,15 +1,10 @@
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+var exports = module.exports = {};
 
 
 var friends = [];
 
   $("#submit").on("click", function(event) {
       event.preventDefault();
-
-
 
       var newFriend = {
         name: $("#name").val().trim(),
@@ -26,19 +21,20 @@ var friends = [];
             $("#q9").val().trim(),
             $("#q10").val().trim()
         ]
-     
+  
       };
 
+        friends.push(newFriend); 
 
-//console.log(newFriend);
 
-friends.push(newFriend);
-console.log(friends)
+      // $.post("/api", newFriend)
+      // .done(function(data) {
+      //   console.log(data);
+      //   alert("Adding friend...");
+      // });
 
-    //   $.post("/api/new", newFriend)
-    //   .done(function(data) {
-    //     console.log(data);
-    //     alert("Adding friend...");
-    //   });
+ });
 
-    });
+    module.exports = friends;
+
+

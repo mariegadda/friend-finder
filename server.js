@@ -18,6 +18,10 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 //============requires the routes===============
 
 require("./routing/htmlRoutes.js")(app);
+// require("./routing/apiRoutes.js")(app);
+
+//==============accesses static js files ============
+// app.use(express.static(path.join(_dirname + "public","data")));
 
 // Starts the server to begin listening
 // =============================================================
