@@ -1,11 +1,16 @@
-var myModule = require("../public/survey.html");
 
-var friends = myModule.friends;
+
+
 
 module.exports = function (app) {
 
-app.get("/api", function(req, res){
-  return res.json(friends);
+app.post("/api", function(req, res){
+ 	console.log(req.body);
+  
 });
 
 };
+
+//push the new friend to the friends array
+
+// get request json response

@@ -1,4 +1,4 @@
-var exports = module.exports = {};
+
 
 
 var friends = [];
@@ -27,14 +27,14 @@ var friends = [];
         friends.push(newFriend); 
 
 
-      // $.post("/api", newFriend)
-      // .done(function(data) {
-      //   console.log(data);
-      //   alert("Adding friend...");
-      // });
+      $.post("/api", newFriend)
+      .done(function(data) {
+        console.log(data);
+        alert("Adding friend...");
+      });
 
  });
 
-    module.exports = friends;
+// array in a backend file   
 
 
