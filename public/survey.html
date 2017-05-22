@@ -18,7 +18,7 @@
 <body>
 
 	<div class="container">
-
+         <form id ="survey">
 		<h1>Survey Questions <small>| please, be honest. </small> </h1>
 		<hr>
 
@@ -138,7 +138,7 @@
 		<!-- Submit Button -->
 		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
  Submit</button>
-
+</form> 
 		<hr>
 	    <footer class="footer">
 	      <div class="container">
@@ -151,39 +151,75 @@
 
 
 <script type="text/javascript">
-     
-
-        $("#submit").on("click", function(event) {
+   
+ // Capture the form inputs 
+    $("#submit").on("click", function(){
       event.preventDefault();
 
-      var newFriend = {
-        name: $("#name").val().trim(),
-        pic: $("#photo").val().trim(),
-        score:[
-            $("#q1").val().trim(),
-            $("#q2").val().trim(),
-            $("#q3").val().trim(),
-            $("#q4").val().trim(),
-            $("#q5").val().trim(),
-            $("#q6").val().trim(),
-            $("#q7").val().trim(),
-            $("#q8").val().trim(),
-            $("#q9").val().trim(),
-            $("#q10").val().trim()
-        ]
-  
-      };
+      // Form validation
+      function validateForm() {
+              var isValid = true;
+              $('.form-control').each(function() {
+                if ( $(this).val() === '' )
+                    isValid = false;
+              });
 
-        
-// console.log(newFriend);
+              $('.answer').each(function() {
 
-      $.post("/api", newFriend)
-      .done(function(data) {
-        console.log(data);
-        alert("Adding friend...");
-      });
+                  if( $(this).val() === "")
+                        isValid = false;
+              });
+              return isValid;
+            }
 
- });
+            // If all required fields are filled
+            if (validateForm() === true)
+            {
+                  //object created for the users data
+                  var newFriend = {
+                    name: $("#name").val().trim(),
+                    pic: $("#photo").val().trim(),
+                    score:[
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                        ]
+                        };
+               
+                  $.post("/api", newFriend)
+                  .done(function(data) {
+                    console.log(data);
+                    
+                  });
+
+      validateForm();
+
+      }else
+            {
+              alert("Please fill out all fields before  submitting!");
+            }
+      
+      return false;
+});
+
+
+
+      //why isn't my $post actually posting?!
+      
+
+
+
+
+
+
+
 </script>
 </body>
 </html>

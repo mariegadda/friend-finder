@@ -1,5 +1,5 @@
 
-//array in a backend file   
+
 
 var friends = [
   {
@@ -28,6 +28,6 @@ var friends = [
 
 
 module.exports = friends;
-
+//array in a backend file   
 
 
