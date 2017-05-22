@@ -21,7 +21,7 @@ require("./routing/htmlRoutes.js")(app);
 require("./routing/apiRoutes.js")(app);
 
 //==============accesses static js files ============
-// app.use(express.static(path.join(_dirname + "public","data")));
+// app.use(express.static(path.join(_dirname + "assets")));
 
 // Starts the server to begin listening
 // =============================================================
