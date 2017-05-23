@@ -5,7 +5,8 @@ var friends = [
   {
     name: "Fry",
     pic: "https://vignette2.wikia.nocookie.net/en.futurama/images/d/da/Fry_Looking_Squint.jpg/revision/latest/zoom-crop/width/240/height/240?cb=20110701192358",
-    score:[5,2,3,4,5,5,5,5,5,5]
+    score:[5,2,3,4,5,5,5,5,5,5] 
+    //
   },
   {
     name: "Leela",
