@@ -2,6 +2,10 @@
 
 Friend finding app! Take the quiz to find your compatible friends
 
+## View Heroku Deploy
+
+https://polar-springs-23223.herokuapp.com/
+
 ## Technologies used:
 
  - Node Js
@@ -9,16 +13,10 @@ Friend finding app! Take the quiz to find your compatible friends
  - SQL
  - MYSQL
  - Javascript
- _ Jquery
+ - Jquery
  - Bootstrap 
- _ HTML
+ - HTML
  - CSS
-
-
-## View Heroku Deploy
-
-https://polar-springs-23223.herokuapp.com/
-
 
 ## Install Locally
 
