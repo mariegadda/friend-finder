@@ -29,6 +29,6 @@ var friends = [
 
 
 module.exports = friends;
-//array in a backend file   
+//object in a backend file   
 
 
